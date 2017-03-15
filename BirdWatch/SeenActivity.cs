@@ -10,17 +10,30 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using System.Data.SqlClient;
+using Android.Graphics;
 
 namespace BirdWatch
 {
-    [Activity(Label = "Seen List")]
-    public class SeenActivity : ListActivity
+    [Activity(Label = "Seen List", Theme = "@style/NoActionBar")]
+    public class SeenActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
+
+            SetContentView(Resource.Layout.Seenlayout);
+
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+
+            toolbar.SetBackgroundColor(Color.ParseColor("#4c7939"));
+            //Toolbar will now take on default Action Bar characteristics
+            SetActionBar(toolbar);
+            //You can now use and reference the ActionBar
+            ActionBar.SetHomeButtonEnabled(true);
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.Title = "Seen List";
 
             List<Bird> seenList = new List<Bird>();
             string constring = "Data Source=noctis2.database.windows.net,1433;Initial Catalog=Birdwatching;Persist Security Info=True;User ID=snakesosa;Password=Freyasweetie1*;";
@@ -37,34 +50,51 @@ namespace BirdWatch
 
                 while (rdr.Read())
                 {
-                    seenList.Add(new Bird() { Name = rdr["Name"].ToString(), Picture = imageConvert(rdr["Picture"].ToString()), Description = rdr["Description"].ToString() });
+                    seenList.Add(new Bird() { Name = rdr["Name"].ToString(), Description = rdr["Description"].ToString() });
                 }
                 connection.Close();
             }
 
-            ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, seenList.Select(n => n.Name).ToList());
+            //ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, seenList.Select(n => n.Name).ToList());
+            ListView ListView = FindViewById<ListView>(Resource.Id.Listview);
+            var ListAdapter = new CustomSeenListAdapter(this, Resource.Layout.custom_list, seenList.Select(n => n.Name).ToList());
+            //SetListAdapter(ListAdapter);
+            ListView.Adapter = ListAdapter;
         }
 
-        protected byte[] imageConvert(string varbin)
+        public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            if (varbin != "")
+            switch (item.ItemId)
             {
-                List<byte> byteList = new List<byte>();
+                case Android.Resource.Id.Home:
+                    Finish();
+                    return true;
 
-                string hexPart = varbin.Substring(2);
-                for (int i = 0; i < hexPart.Length / 2; i++)
-                {
-                    string hexNumber = hexPart.Substring(i * 2, 2);
-                    byteList.Add((byte)Convert.ToInt32(hexNumber, 16));
-                }
-
-                return byteList.ToArray();
+                default:
+                    return base.OnOptionsItemSelected(item);
             }
-            else
-            {
-                return Enumerable.Empty<byte>().ToArray();
-            }
-
         }
+
+        //protected byte[] imageConvert(string varbin)
+        //{
+        //    if (varbin != "")
+        //    {
+        //        List<byte> byteList = new List<byte>();
+
+        //        string hexPart = varbin.Substring(2);
+        //        for (int i = 0; i < hexPart.Length / 2; i++)
+        //        {
+        //            string hexNumber = hexPart.Substring(i * 2, 2);
+        //            byteList.Add((byte)Convert.ToInt32(hexNumber, 16));
+        //        }
+
+        //        return byteList.ToArray();
+        //    }
+        //    else
+        //    {
+        //        return Enumerable.Empty<byte>().ToArray();
+        //    }
+
+        //}
     }
 }

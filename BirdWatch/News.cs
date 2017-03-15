@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace BirdWatch
 {
-    class News
+    public class News
     {
         public string NewsItem { get; set; }
         public DateTime Date { get; set; }

@@ -7,7 +7,10 @@ D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\System.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\System.Xml.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\System.Xml.Linq.dll
+D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\Xamarin.Android.Support.Design.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\Xamarin.Android.Support.v4.dll
+D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\Xamarin.Android.Support.v7.AppCompat.dll
+D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\Xamarin.GooglePlayServices.Base.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\Xamarin.GooglePlayServices.Basement.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\android\assets\Xamarin.GooglePlayServices.Maps.dll
