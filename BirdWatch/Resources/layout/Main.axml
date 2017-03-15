@@ -4,6 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#9fc5f8">
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="?android:attr/colorPrimary" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dip"
@@ -41,7 +47,7 @@
             android:layout_margin="20dip"
             android:drawableTop="@drawable/seen"
             android:text="Seen List"
-            android:backgroundTint="#6aa84f"
+            android:backgroundTint="#7cb663"
             android:id="@+id/seenButton" />
         <Button
             android:layout_width="0dip"
@@ -50,7 +56,7 @@
             android:layout_margin="20dip"
             android:drawableTop="@drawable/wish"
             android:text="Wish List"
-            android:backgroundTint="#674ea7"
+            android:backgroundTint="#7a63b6"
             android:id="@+id/wishButton" />
     </LinearLayout>
     <LinearLayout
