@@ -9,6 +9,7 @@ D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\bin\Debug\Xamarin
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\bin\Debug\Xamarin.GooglePlayServices.Base.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
+D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\bin\Debug\Xamarin.GooglePlayServices.Measurement.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\BirdWatch.csprojResolveAssemblyReference.cache
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\BirdWatch.dll
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\BirdWatch.pdb
@@ -20,6 +21,8 @@ D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\res\lay
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\res\layout\maplayout.xml
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\res\layout\cameralayout.xml
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\res\layout\custom_list.xml
+D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\res\layout\birddetaillayout.xml
+D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\res\layout\permissionlayout.xml
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\res\layout\main.xml
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\res\values\strings.xml
 D:\College\Year 4\Sem 2\Mobile Development\BirdWatch\BirdWatch\obj\Debug\res\drawable\icon.png

@@ -25,7 +25,8 @@ namespace BirdWatch
         ImageView _imageView;
         readonly string[] PermissionsLocation =
     {
-      Manifest.Permission.Camera
+      Manifest.Permission.Camera,
+      Manifest.Permission.ReadExternalStorage
     };
 
         const int RequestLocationId = 0;
@@ -54,6 +55,25 @@ namespace BirdWatch
                 Button button = this.FindViewById<Button>(Resource.Id.myButton);
                 _imageView = FindViewById<ImageView>(Resource.Id.imageView1);
                 button.Click += TakeAPicture;
+            }
+
+            const string permission = Manifest.Permission.Camera;
+            if (CheckSelfPermission(permission) == (int)Permission.Granted)
+            {
+                RequestPermissions(PermissionsLocation, RequestLocationId);
+            }
+            else
+            {
+                if (ShouldShowRequestPermissionRationale(permission))
+                {
+                    //Explain to the user why we need to read the contacts
+                    Snackbar.Make(FindViewById(Resource.Layout.Cameralayout), "Location access is required to show coffee shops nearby.", Snackbar.LengthIndefinite)
+                            .SetAction("OK", v => RequestPermissions(PermissionsLocation, RequestLocationId))
+                            .Show();
+                    return;
+                }
+                //Finally request permissions with the list of permissions and Id
+                RequestPermissions(PermissionsLocation, RequestLocationId);
             }
         }
 
@@ -92,25 +112,6 @@ namespace BirdWatch
         private void TakeAPicture(object sender, EventArgs eventArgs)
         {
 
-            const string permission = Manifest.Permission.Camera;
-            if (CheckSelfPermission(permission) == (int)Permission.Granted)
-            {
-                RequestPermissions(PermissionsLocation, RequestLocationId);
-            }
-            else
-            {
-                if (ShouldShowRequestPermissionRationale(permission))
-                {
-                    //Explain to the user why we need to read the contacts
-                    Snackbar.Make(FindViewById(Resource.Layout.Cameralayout), "Location access is required to show coffee shops nearby.", Snackbar.LengthIndefinite)
-                            .SetAction("OK", v => RequestPermissions(PermissionsLocation, RequestLocationId))
-                            .Show();
-                    return;
-                }
-                //Finally request permissions with the list of permissions and Id
-                RequestPermissions(PermissionsLocation, RequestLocationId);
-            }
-
             Intent intent = new Intent(MediaStore.ActionImageCapture);
             Camera._file = new File(Camera._dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
             intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(Camera._file));
@@ -135,6 +136,7 @@ namespace BirdWatch
 
             int height = Resources.DisplayMetrics.HeightPixels;
             int width = _imageView.Height;
+
             Camera.bitmap = Camera._file.Path.LoadAndResizeBitmap(width, height);
             if (Camera.bitmap != null)
             {
