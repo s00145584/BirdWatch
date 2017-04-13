@@ -2,6 +2,10 @@ BirdWatch.BirdActivity, BirdWatch;md548e890d458c68b1bde1bc12885e318a1.BirdActivi
 BirdWatch.BirdActivity, BirdWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md548e890d458c68b1bde1bc12885e318a1.BirdActivity
 BirdWatch.BirdActivity;md548e890d458c68b1bde1bc12885e318a1.BirdActivity
 birdwatch.BirdActivity;md548e890d458c68b1bde1bc12885e318a1.BirdActivity
+BirdWatch.BirdDetailActivity, BirdWatch;md548e890d458c68b1bde1bc12885e318a1.BirdDetailActivity
+BirdWatch.BirdDetailActivity, BirdWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md548e890d458c68b1bde1bc12885e318a1.BirdDetailActivity
+BirdWatch.BirdDetailActivity;md548e890d458c68b1bde1bc12885e318a1.BirdDetailActivity
+birdwatch.BirdDetailActivity;md548e890d458c68b1bde1bc12885e318a1.BirdDetailActivity
 BirdWatch.CameraActivity, BirdWatch;md548e890d458c68b1bde1bc12885e318a1.CameraActivity
 BirdWatch.CameraActivity, BirdWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md548e890d458c68b1bde1bc12885e318a1.CameraActivity
 BirdWatch.CameraActivity;md548e890d458c68b1bde1bc12885e318a1.CameraActivity
@@ -34,6 +38,10 @@ BirdWatch.NewsActivity, BirdWatch;md548e890d458c68b1bde1bc12885e318a1.NewsActivi
 BirdWatch.NewsActivity, BirdWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md548e890d458c68b1bde1bc12885e318a1.NewsActivity
 BirdWatch.NewsActivity;md548e890d458c68b1bde1bc12885e318a1.NewsActivity
 birdwatch.NewsActivity;md548e890d458c68b1bde1bc12885e318a1.NewsActivity
+BirdWatch.PermissionsActivity, BirdWatch;md548e890d458c68b1bde1bc12885e318a1.PermissionsActivity
+BirdWatch.PermissionsActivity, BirdWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md548e890d458c68b1bde1bc12885e318a1.PermissionsActivity
+BirdWatch.PermissionsActivity;md548e890d458c68b1bde1bc12885e318a1.PermissionsActivity
+birdwatch.PermissionsActivity;md548e890d458c68b1bde1bc12885e318a1.PermissionsActivity
 BirdWatch.SeenActivity, BirdWatch;md548e890d458c68b1bde1bc12885e318a1.SeenActivity
 BirdWatch.SeenActivity, BirdWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md548e890d458c68b1bde1bc12885e318a1.SeenActivity
 BirdWatch.SeenActivity;md548e890d458c68b1bde1bc12885e318a1.SeenActivity

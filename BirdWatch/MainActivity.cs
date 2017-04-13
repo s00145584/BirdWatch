@@ -3,21 +3,60 @@ using Android.Widget;
 using Android.OS;
 using Android.Views;
 using Android.Graphics;
+using Android.Telephony;
+using Android.Content;
+using Java.Util;
+using Android;
+using Android.Content.PM;
+using Android.Support.Design.Widget;
+using Android.Preferences;
+using static Android.Resource;
 
 namespace BirdWatch
 {
     [Activity(Label = "Bird Watching Ireland", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/NoActionBar")]
     public class MainActivity : Activity
     {
+
+        readonly string[] PermissionsLocation =
+    {
+      Manifest.Permission.ReadPhoneState
+    };
+
+        const int RequestLocationId = 0;
+        Context mContext = Application.Context;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
 
+            var myIntent = new Intent(this, typeof(PermissionsActivity));
+            StartActivityForResult(myIntent, 0);
+
+
+
+            //var telephonyDeviceID = string.Empty;
+            //var telephonySIMSerialNumber = string.Empty;
+            //TelephonyManager tManager = (TelephonyManager)GetSystemService(Context.TelephonyService);
+
+            //if (tManager != null)
+            //{
+            //    if (!string.IsNullOrEmpty(tManager.DeviceId))
+            //        telephonyDeviceID = tManager.DeviceId;
+            //    if (!string.IsNullOrEmpty(tManager.SimSerialNumber))
+            //        telephonySIMSerialNumber = tManager.SimSerialNumber;
+            //}
+            //var androidID = Android.Provider.Settings.Secure.GetString(ContentResolver, Android.Provider.Settings.Secure.AndroidId);
+            //var deviceUuid = new UUID(androidID.GetHashCode(), ((long)telephonyDeviceID.GetHashCode() << 32) | telephonySIMSerialNumber.GetHashCode());
+            //var deviceID = deviceUuid.ToString();
+
+            //var iid = InstanceID.GetInstance(this).getId();
+
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
 
-            toolbar.SetBackgroundColor(Color.ParseColor("#599cf3"));
+            toolbar.SetBackgroundColor(Android.Graphics.Color.ParseColor("#599cf3"));
             //Toolbar will now take on default Action Bar characteristics
             SetActionBar(toolbar);
             //You can now use and reference the ActionBar
@@ -39,12 +78,89 @@ namespace BirdWatch
 
 
         }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            if (resultCode == Result.Ok)
+            {
+                var helloLabel = data.GetStringExtra("greeting");
+                var telephonyDeviceID = string.Empty;
+                var telephonySIMSerialNumber = string.Empty;
+                TelephonyManager tManager = (TelephonyManager)GetSystemService(Context.TelephonyService);
+
+                if (tManager != null)
+                {
+                    if (!string.IsNullOrEmpty(tManager.DeviceId))
+                        telephonyDeviceID = tManager.DeviceId;
+                    if (!string.IsNullOrEmpty(tManager.SimSerialNumber))
+                        telephonySIMSerialNumber = tManager.SimSerialNumber;
+                }
+                var androidID = Android.Provider.Settings.Secure.GetString(ContentResolver, Android.Provider.Settings.Secure.AndroidId);
+                var deviceUuid = new UUID(androidID.GetHashCode(), ((long)telephonyDeviceID.GetHashCode() << 32) | telephonySIMSerialNumber.GetHashCode());
+                var deviceID = deviceUuid.ToString();
+
+                ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(mContext);
+                ISharedPreferencesEditor editor = prefs.Edit();
+                editor.PutString("androidID", androidID);
+                // editor.Commit();    // applies changes synchronously on older APIs
+                editor.Apply();        // applies changes asynchronously on newer APIs
+            }
+        }
+
+        protected void SetUpUnique()
+        {
+            //var telephonyDeviceID = string.Empty;
+            //var telephonySIMSerialNumber = string.Empty;
+            //TelephonyManager tManager = (TelephonyManager)GetSystemService(Context.TelephonyService);
+
+            //if (tManager != null)
+            //{
+            //    if (!string.IsNullOrEmpty(tManager.DeviceId))
+            //        telephonyDeviceID = tManager.DeviceId;
+            //    if (!string.IsNullOrEmpty(tManager.SimSerialNumber))
+            //        telephonySIMSerialNumber = tManager.SimSerialNumber;
+            //}
+            //var androidID = Android.Provider.Settings.Secure.GetString(ContentResolver, Android.Provider.Settings.Secure.AndroidId);
+            //var deviceUuid = new UUID(androidID.GetHashCode(), ((long)telephonyDeviceID.GetHashCode() << 32) | telephonySIMSerialNumber.GetHashCode());
+            //var deviceID = deviceUuid.ToString();
+
+            //ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(mContext);
+            //ISharedPreferencesEditor editor = prefs.Edit();
+            //editor.PutString("androidID", androidID);
+            //// editor.Commit();    // applies changes synchronously on older APIs
+            //editor.Apply();        // applies changes asynchronously on newer APIs
+        }
+
+        public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults)
+        {
+            //var telephonyDeviceID = string.Empty;
+            //var telephonySIMSerialNumber = string.Empty;
+            //TelephonyManager tManager = (TelephonyManager)GetSystemService(Context.TelephonyService);
+
+            //if (tManager != null)
+            //{
+            //    if (!string.IsNullOrEmpty(tManager.DeviceId))
+            //        telephonyDeviceID = tManager.DeviceId;
+            //    if (!string.IsNullOrEmpty(tManager.SimSerialNumber))
+            //        telephonySIMSerialNumber = tManager.SimSerialNumber;
+            //}
+            //var androidID = Android.Provider.Settings.Secure.GetString(ContentResolver, Android.Provider.Settings.Secure.AndroidId);
+            //var deviceUuid = new UUID(androidID.GetHashCode(), ((long)telephonyDeviceID.GetHashCode() << 32) | telephonySIMSerialNumber.GetHashCode());
+            //var deviceID = deviceUuid.ToString();
+
+            //ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(mContext);
+            //ISharedPreferencesEditor editor = prefs.Edit();
+            //editor.PutString("androidID", androidID);
+            //// editor.Commit();    // applies changes synchronously on older APIs
+            //editor.Apply();        // applies changes asynchronously on newer APIs
+        }
         //public override bool OnCreateOptionsMenu(IMenu menu)
         //{
         //    MenuInflater.Inflate(Resource.Menu.option_menu, menu);
         //    return true;
         //}
-        
+
     }
 }
 

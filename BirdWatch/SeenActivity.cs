@@ -11,12 +11,15 @@ using Android.Views;
 using Android.Widget;
 using System.Data.SqlClient;
 using Android.Graphics;
+using Android.Preferences;
 
 namespace BirdWatch
 {
     [Activity(Label = "Seen List", Theme = "@style/NoActionBar")]
     public class SeenActivity : Activity
     {
+        Context mContext = Application.Context;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -24,6 +27,9 @@ namespace BirdWatch
             // Create your application here
 
             SetContentView(Resource.Layout.Seenlayout);
+
+            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(mContext);
+            var String = prefs.GetString("androidID", "");
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
 
