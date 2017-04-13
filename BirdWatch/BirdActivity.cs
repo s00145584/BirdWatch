@@ -61,7 +61,28 @@ namespace BirdWatch
             ListView ListView = FindViewById<ListView>(Resource.Id.Listview);
             var ListAdapter = new CustomListAdapter(this, Resource.Layout.custom_list, birdList.Select(n => n.Name).ToList());
             //SetListAdapter(ListAdapter);
+            
             ListView.Adapter = ListAdapter;
+            ListView.ItemClick += OnListItemClick;
+            ListView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)
+            {
+                var selectedFromList = (String)(ListView.GetItemAtPosition(position.Position));
+                var intent = new Intent(this, typeof(BirdDetailActivity));
+                intent.PutExtra("Name", selectedFromList);
+                intent.PutExtra("IncomingPage", "Bird");
+                StartActivity(intent);
+
+                //          i.PutExtra("key",selectedFromList);
+                //          StartActivity(i);
+
+                //int pos=Convert.ToInt32(position);
+                //ListView Clicked item value
+                //string  itemValue    =(string)listView.GetItemAtPosition(pos);
+
+                //Toast.MakeText(this," position is "   +itemValue,ToastLength.Long).Show();
+
+            };
+
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -75,6 +96,18 @@ namespace BirdWatch
                 default:
                     return base.OnOptionsItemSelected(item);
             }
+        }
+
+        void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            //var listView = sender as ListView;
+            ////var t = tableItems[e.Position];
+            ////Android.Widget.Toast.MakeText(this, t.Heading, Android.Widget.ToastLength.Short).Show();
+
+            //var speakerName = Resource.Layout.custom_list[e.Position];
+            //var intent = new Intent(this, typeof(BirdDetailActivity));
+            //intent.PutExtra("Name", speakerName);
+            //StartActivity(intent);
         }
 
         //protected byte[] imageConvert(string varbin)
