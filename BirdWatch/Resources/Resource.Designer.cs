@@ -83,6 +83,22 @@ namespace BirdWatch
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0c0000
+			public const int androidcolors = 2131492864;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -1021,32 +1037,32 @@ namespace BirdWatch
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f070054
-			public const int abc_background_cache_hint_selector_material_dark = 2131165268;
+			// aapt resource value: 0x7f070060
+			public const int abc_background_cache_hint_selector_material_dark = 2131165280;
 			
-			// aapt resource value: 0x7f070055
-			public const int abc_background_cache_hint_selector_material_light = 2131165269;
+			// aapt resource value: 0x7f070061
+			public const int abc_background_cache_hint_selector_material_light = 2131165281;
 			
-			// aapt resource value: 0x7f070056
-			public const int abc_color_highlight_material = 2131165270;
+			// aapt resource value: 0x7f070062
+			public const int abc_color_highlight_material = 2131165282;
 			
 			// aapt resource value: 0x7f070011
 			public const int abc_input_method_navigation_guard = 2131165201;
 			
-			// aapt resource value: 0x7f070057
-			public const int abc_primary_text_disable_only_material_dark = 2131165271;
+			// aapt resource value: 0x7f070063
+			public const int abc_primary_text_disable_only_material_dark = 2131165283;
 			
-			// aapt resource value: 0x7f070058
-			public const int abc_primary_text_disable_only_material_light = 2131165272;
+			// aapt resource value: 0x7f070064
+			public const int abc_primary_text_disable_only_material_light = 2131165284;
 			
-			// aapt resource value: 0x7f070059
-			public const int abc_primary_text_material_dark = 2131165273;
+			// aapt resource value: 0x7f070065
+			public const int abc_primary_text_material_dark = 2131165285;
 			
-			// aapt resource value: 0x7f07005a
-			public const int abc_primary_text_material_light = 2131165274;
+			// aapt resource value: 0x7f070066
+			public const int abc_primary_text_material_light = 2131165286;
 			
-			// aapt resource value: 0x7f07005b
-			public const int abc_search_url_text = 2131165275;
+			// aapt resource value: 0x7f070067
+			public const int abc_search_url_text = 2131165287;
 			
 			// aapt resource value: 0x7f070012
 			public const int abc_search_url_text_normal = 2131165202;
@@ -1057,11 +1073,11 @@ namespace BirdWatch
 			// aapt resource value: 0x7f070014
 			public const int abc_search_url_text_selected = 2131165204;
 			
-			// aapt resource value: 0x7f07005c
-			public const int abc_secondary_text_material_dark = 2131165276;
+			// aapt resource value: 0x7f070068
+			public const int abc_secondary_text_material_dark = 2131165288;
 			
-			// aapt resource value: 0x7f07005d
-			public const int abc_secondary_text_material_light = 2131165277;
+			// aapt resource value: 0x7f070069
+			public const int abc_secondary_text_material_light = 2131165289;
 			
 			// aapt resource value: 0x7f070015
 			public const int accent_material_dark = 2131165205;
@@ -1080,6 +1096,12 @@ namespace BirdWatch
 			
 			// aapt resource value: 0x7f07001a
 			public const int background_material_light = 2131165210;
+			
+			// aapt resource value: 0x7f07005e
+			public const int black = 2131165278;
+			
+			// aapt resource value: 0x7f070054
+			public const int blue = 2131165268;
 			
 			// aapt resource value: 0x7f07001b
 			public const int bright_foreground_disabled_material_dark = 2131165211;
@@ -1108,8 +1130,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f070008
 			public const int common_action_bar_splitter = 2131165192;
 			
-			// aapt resource value: 0x7f07005e
-			public const int common_google_signin_btn_text_dark = 2131165278;
+			// aapt resource value: 0x7f07006a
+			public const int common_google_signin_btn_text_dark = 2131165290;
 			
 			// aapt resource value: 0x7f070009
 			public const int common_google_signin_btn_text_dark_default = 2131165193;
@@ -1123,8 +1145,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f07000a
 			public const int common_google_signin_btn_text_dark_pressed = 2131165194;
 			
-			// aapt resource value: 0x7f07005f
-			public const int common_google_signin_btn_text_light = 2131165279;
+			// aapt resource value: 0x7f07006b
+			public const int common_google_signin_btn_text_light = 2131165291;
 			
 			// aapt resource value: 0x7f07000d
 			public const int common_google_signin_btn_text_light_default = 2131165197;
@@ -1138,8 +1160,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f07000e
 			public const int common_google_signin_btn_text_light_pressed = 2131165198;
 			
-			// aapt resource value: 0x7f070060
-			public const int common_plus_signin_btn_text_dark = 2131165280;
+			// aapt resource value: 0x7f07006c
+			public const int common_plus_signin_btn_text_dark = 2131165292;
 			
 			// aapt resource value: 0x7f070000
 			public const int common_plus_signin_btn_text_dark_default = 2131165184;
@@ -1153,8 +1175,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f070001
 			public const int common_plus_signin_btn_text_dark_pressed = 2131165185;
 			
-			// aapt resource value: 0x7f070061
-			public const int common_plus_signin_btn_text_light = 2131165281;
+			// aapt resource value: 0x7f07006d
+			public const int common_plus_signin_btn_text_light = 2131165293;
 			
 			// aapt resource value: 0x7f070004
 			public const int common_plus_signin_btn_text_light_default = 2131165188;
@@ -1167,6 +1189,21 @@ namespace BirdWatch
 			
 			// aapt resource value: 0x7f070005
 			public const int common_plus_signin_btn_text_light_pressed = 2131165189;
+			
+			// aapt resource value: 0x7f070059
+			public const int darkblue = 2131165273;
+			
+			// aapt resource value: 0x7f07005b
+			public const int darkgreen = 2131165275;
+			
+			// aapt resource value: 0x7f07005c
+			public const int darkorange = 2131165276;
+			
+			// aapt resource value: 0x7f07005a
+			public const int darkpurple = 2131165274;
+			
+			// aapt resource value: 0x7f07005d
+			public const int darkred = 2131165277;
 			
 			// aapt resource value: 0x7f07004b
 			public const int design_fab_shadow_end_color = 2131165259;
@@ -1212,6 +1249,12 @@ namespace BirdWatch
 			
 			// aapt resource value: 0x7f070028
 			public const int foreground_material_light = 2131165224;
+			
+			// aapt resource value: 0x7f07005f
+			public const int gray = 2131165279;
+			
+			// aapt resource value: 0x7f070056
+			public const int green = 2131165270;
 			
 			// aapt resource value: 0x7f070029
 			public const int highlighted_text_material_dark = 2131165225;
@@ -1261,6 +1304,9 @@ namespace BirdWatch
 			// aapt resource value: 0x7f070038
 			public const int material_grey_900 = 2131165240;
 			
+			// aapt resource value: 0x7f070057
+			public const int orange = 2131165271;
+			
 			// aapt resource value: 0x7f070039
 			public const int primary_dark_material_dark = 2131165241;
 			
@@ -1284,6 +1330,12 @@ namespace BirdWatch
 			
 			// aapt resource value: 0x7f070040
 			public const int primary_text_disabled_material_light = 2131165248;
+			
+			// aapt resource value: 0x7f070055
+			public const int purple = 2131165269;
+			
+			// aapt resource value: 0x7f070058
+			public const int red = 2131165272;
 			
 			// aapt resource value: 0x7f070041
 			public const int ripple_material_dark = 2131165249;
@@ -1309,11 +1361,11 @@ namespace BirdWatch
 			// aapt resource value: 0x7f070048
 			public const int switch_thumb_disabled_material_light = 2131165256;
 			
-			// aapt resource value: 0x7f070062
-			public const int switch_thumb_material_dark = 2131165282;
+			// aapt resource value: 0x7f07006e
+			public const int switch_thumb_material_dark = 2131165294;
 			
-			// aapt resource value: 0x7f070063
-			public const int switch_thumb_material_light = 2131165283;
+			// aapt resource value: 0x7f07006f
+			public const int switch_thumb_material_light = 2131165295;
 			
 			// aapt resource value: 0x7f070049
 			public const int switch_thumb_normal_material_dark = 2131165257;
@@ -1867,160 +1919,172 @@ namespace BirdWatch
 			public const int abc_textfield_search_material = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int bird = 2130837573;
+			public const int app_icon = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int camera = 2130837574;
+			public const int app_icon5 = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int common_full_open_on_phone = 2130837575;
+			public const int bin_white = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int common_google_signin_btn_icon_dark = 2130837576;
+			public const int bird = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int common_google_signin_btn_icon_dark_disabled = 2130837577;
+			public const int camera = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int common_google_signin_btn_icon_dark_focused = 2130837578;
+			public const int common_full_open_on_phone = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int common_google_signin_btn_icon_dark_normal = 2130837579;
+			public const int common_google_signin_btn_icon_dark = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int common_google_signin_btn_icon_dark_pressed = 2130837580;
+			public const int common_google_signin_btn_icon_dark_disabled = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int common_google_signin_btn_icon_light = 2130837581;
+			public const int common_google_signin_btn_icon_dark_focused = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int common_google_signin_btn_icon_light_disabled = 2130837582;
+			public const int common_google_signin_btn_icon_dark_normal = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int common_google_signin_btn_icon_light_focused = 2130837583;
+			public const int common_google_signin_btn_icon_dark_pressed = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int common_google_signin_btn_icon_light_normal = 2130837584;
+			public const int common_google_signin_btn_icon_light = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int common_google_signin_btn_icon_light_pressed = 2130837585;
+			public const int common_google_signin_btn_icon_light_disabled = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int common_google_signin_btn_text_dark = 2130837586;
+			public const int common_google_signin_btn_icon_light_focused = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int common_google_signin_btn_text_dark_disabled = 2130837587;
+			public const int common_google_signin_btn_icon_light_normal = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int common_google_signin_btn_text_dark_focused = 2130837588;
+			public const int common_google_signin_btn_icon_light_pressed = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int common_google_signin_btn_text_dark_normal = 2130837589;
+			public const int common_google_signin_btn_text_dark = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int common_google_signin_btn_text_dark_pressed = 2130837590;
+			public const int common_google_signin_btn_text_dark_disabled = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int common_google_signin_btn_text_light = 2130837591;
+			public const int common_google_signin_btn_text_dark_focused = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int common_google_signin_btn_text_light_disabled = 2130837592;
+			public const int common_google_signin_btn_text_dark_normal = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int common_google_signin_btn_text_light_focused = 2130837593;
+			public const int common_google_signin_btn_text_dark_pressed = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int common_google_signin_btn_text_light_normal = 2130837594;
+			public const int common_google_signin_btn_text_light = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int common_google_signin_btn_text_light_pressed = 2130837595;
+			public const int common_google_signin_btn_text_light_disabled = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int common_ic_googleplayservices = 2130837596;
+			public const int common_google_signin_btn_text_light_focused = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int common_plus_signin_btn_icon_dark = 2130837597;
+			public const int common_google_signin_btn_text_light_normal = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int common_plus_signin_btn_icon_dark_disabled = 2130837598;
+			public const int common_google_signin_btn_text_light_pressed = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int common_plus_signin_btn_icon_dark_focused = 2130837599;
+			public const int common_ic_googleplayservices = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int common_plus_signin_btn_icon_dark_normal = 2130837600;
+			public const int common_plus_signin_btn_icon_dark = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int common_plus_signin_btn_icon_dark_pressed = 2130837601;
+			public const int common_plus_signin_btn_icon_dark_disabled = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int common_plus_signin_btn_icon_light = 2130837602;
+			public const int common_plus_signin_btn_icon_dark_focused = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int common_plus_signin_btn_icon_light_disabled = 2130837603;
+			public const int common_plus_signin_btn_icon_dark_normal = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int common_plus_signin_btn_icon_light_focused = 2130837604;
+			public const int common_plus_signin_btn_icon_dark_pressed = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int common_plus_signin_btn_icon_light_normal = 2130837605;
+			public const int common_plus_signin_btn_icon_light = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int common_plus_signin_btn_icon_light_pressed = 2130837606;
+			public const int common_plus_signin_btn_icon_light_disabled = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int common_plus_signin_btn_text_dark = 2130837607;
+			public const int common_plus_signin_btn_icon_light_focused = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int common_plus_signin_btn_text_dark_disabled = 2130837608;
+			public const int common_plus_signin_btn_icon_light_normal = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int common_plus_signin_btn_text_dark_focused = 2130837609;
+			public const int common_plus_signin_btn_icon_light_pressed = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int common_plus_signin_btn_text_dark_normal = 2130837610;
+			public const int common_plus_signin_btn_text_dark = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int common_plus_signin_btn_text_dark_pressed = 2130837611;
+			public const int common_plus_signin_btn_text_dark_disabled = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int common_plus_signin_btn_text_light = 2130837612;
+			public const int common_plus_signin_btn_text_dark_focused = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int common_plus_signin_btn_text_light_disabled = 2130837613;
+			public const int common_plus_signin_btn_text_dark_normal = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int common_plus_signin_btn_text_light_focused = 2130837614;
+			public const int common_plus_signin_btn_text_dark_pressed = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int common_plus_signin_btn_text_light_normal = 2130837615;
+			public const int common_plus_signin_btn_text_light = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int common_plus_signin_btn_text_light_pressed = 2130837616;
+			public const int common_plus_signin_btn_text_light_disabled = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int design_fab_background = 2130837617;
+			public const int common_plus_signin_btn_text_light_focused = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int design_snackbar_background = 2130837618;
+			public const int common_plus_signin_btn_text_light_normal = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int Icon = 2130837619;
+			public const int common_plus_signin_btn_text_light_pressed = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int map = 2130837620;
+			public const int design_fab_background = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int news = 2130837621;
-			
-			// aapt resource value: 0x7f020078
-			public const int notification_template_icon_bg = 2130837624;
+			public const int design_snackbar_background = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int seen = 2130837622;
+			public const int Icon = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int wish = 2130837623;
+			public const int map = 2130837623;
+			
+			// aapt resource value: 0x7f020078
+			public const int news = 2130837624;
+			
+			// aapt resource value: 0x7f02007c
+			public const int notification_template_icon_bg = 2130837628;
+			
+			// aapt resource value: 0x7f020079
+			public const int seen = 2130837625;
+			
+			// aapt resource value: 0x7f02007a
+			public const int settings_white = 2130837626;
+			
+			// aapt resource value: 0x7f02007b
+			public const int wish = 2130837627;
 			
 			static Drawable()
 			{
@@ -2035,11 +2099,11 @@ namespace BirdWatch
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090075
-			public const int Listview = 2131296373;
+			// aapt resource value: 0x7f09007d
+			public const int Listview = 2131296381;
 			
-			// aapt resource value: 0x7f090088
-			public const int action0 = 2131296392;
+			// aapt resource value: 0x7f090090
+			public const int action0 = 2131296400;
 			
 			// aapt resource value: 0x7f090065
 			public const int action_bar = 2131296357;
@@ -2065,8 +2129,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f090066
 			public const int action_context_bar = 2131296358;
 			
-			// aapt resource value: 0x7f09008c
-			public const int action_divider = 2131296396;
+			// aapt resource value: 0x7f090094
+			public const int action_divider = 2131296404;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -2104,20 +2168,26 @@ namespace BirdWatch
 			// aapt resource value: 0x7f090025
 			public const int beginning = 2131296293;
 			
-			// aapt resource value: 0x7f090081
-			public const int birdButton = 2131296385;
+			// aapt resource value: 0x7f090089
+			public const int birdButton = 2131296393;
 			
 			// aapt resource value: 0x7f090035
 			public const int bottom = 2131296309;
 			
+			// aapt resource value: 0x7f0900a2
+			public const int btnAddLocation = 2131296418;
+			
+			// aapt resource value: 0x7f09009d
+			public const int btnGetLocation = 2131296413;
+			
 			// aapt resource value: 0x7f09004f
 			public const int buttonPanel = 2131296335;
 			
-			// aapt resource value: 0x7f090085
-			public const int cameraButton = 2131296389;
+			// aapt resource value: 0x7f09008d
+			public const int cameraButton = 2131296397;
 			
-			// aapt resource value: 0x7f090089
-			public const int cancel_action = 2131296393;
+			// aapt resource value: 0x7f090091
+			public const int cancel_action = 2131296401;
 			
 			// aapt resource value: 0x7f090036
 			public const int center = 2131296310;
@@ -2131,8 +2201,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f09005d
 			public const int checkbox = 2131296349;
 			
-			// aapt resource value: 0x7f09008f
-			public const int chronometer = 2131296399;
+			// aapt resource value: 0x7f090097
+			public const int chronometer = 2131296407;
 			
 			// aapt resource value: 0x7f09003e
 			public const int clip_horizontal = 2131296318;
@@ -2161,17 +2231,23 @@ namespace BirdWatch
 			// aapt resource value: 0x7f09004b
 			public const int default_activity_button = 2131296331;
 			
-			// aapt resource value: 0x7f09007f
-			public const int design_menu_item_action_area = 2131296383;
+			// aapt resource value: 0x7f0900a3
+			public const int delete_menu_preferences = 2131296419;
 			
-			// aapt resource value: 0x7f09007e
-			public const int design_menu_item_action_area_stub = 2131296382;
+			// aapt resource value: 0x7f0900a4
+			public const int delsel = 2131296420;
 			
-			// aapt resource value: 0x7f09007d
-			public const int design_menu_item_text = 2131296381;
+			// aapt resource value: 0x7f090087
+			public const int design_menu_item_action_area = 2131296391;
 			
-			// aapt resource value: 0x7f09007c
-			public const int design_navigation_view = 2131296380;
+			// aapt resource value: 0x7f090086
+			public const int design_menu_item_action_area_stub = 2131296390;
+			
+			// aapt resource value: 0x7f090085
+			public const int design_menu_item_text = 2131296389;
+			
+			// aapt resource value: 0x7f090084
+			public const int design_navigation_view = 2131296388;
 			
 			// aapt resource value: 0x7f09001a
 			public const int disableHome = 2131296282;
@@ -2182,8 +2258,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f090026
 			public const int end = 2131296294;
 			
-			// aapt resource value: 0x7f090094
-			public const int end_padder = 2131296404;
+			// aapt resource value: 0x7f09009c
+			public const int end_padder = 2131296412;
 			
 			// aapt resource value: 0x7f09002e
 			public const int enterAlways = 2131296302;
@@ -2221,6 +2297,9 @@ namespace BirdWatch
 			// aapt resource value: 0x7f09000b
 			public const int hybrid = 2131296267;
 			
+			// aapt resource value: 0x7f090079
+			public const int iViewPicture = 2131296377;
+			
 			// aapt resource value: 0x7f09004d
 			public const int icon = 2131296333;
 			
@@ -2233,11 +2312,11 @@ namespace BirdWatch
 			// aapt resource value: 0x7f09004a
 			public const int image = 2131296330;
 			
-			// aapt resource value: 0x7f090077
-			public const int imageView1 = 2131296375;
+			// aapt resource value: 0x7f09007f
+			public const int imageView1 = 2131296383;
 			
-			// aapt resource value: 0x7f090093
-			public const int info = 2131296403;
+			// aapt resource value: 0x7f09009b
+			public const int info = 2131296411;
 			
 			// aapt resource value: 0x7f090000
 			public const int item_touch_helper_previous_elevation = 2131296256;
@@ -2248,11 +2327,14 @@ namespace BirdWatch
 			// aapt resource value: 0x7f090017
 			public const int light = 2131296279;
 			
-			// aapt resource value: 0x7f09008d
-			public const int line1 = 2131296397;
+			// aapt resource value: 0x7f090095
+			public const int line1 = 2131296405;
 			
-			// aapt resource value: 0x7f090091
-			public const int line3 = 2131296401;
+			// aapt resource value: 0x7f090099
+			public const int line3 = 2131296409;
+			
+			// aapt resource value: 0x7f090074
+			public const int linearID = 2131296372;
 			
 			// aapt resource value: 0x7f090018
 			public const int listMode = 2131296280;
@@ -2260,14 +2342,17 @@ namespace BirdWatch
 			// aapt resource value: 0x7f09004c
 			public const int list_item = 2131296332;
 			
-			// aapt resource value: 0x7f090086
-			public const int map = 2131296390;
+			// aapt resource value: 0x7f09008e
+			public const int map = 2131296398;
 			
-			// aapt resource value: 0x7f090084
-			public const int mapButton = 2131296388;
+			// aapt resource value: 0x7f09008c
+			public const int mapButton = 2131296396;
 			
-			// aapt resource value: 0x7f09008b
-			public const int media_actions = 2131296395;
+			// aapt resource value: 0x7f090093
+			public const int media_actions = 2131296403;
+			
+			// aapt resource value: 0x7f0900a5
+			public const int menu_preferences = 2131296421;
 			
 			// aapt resource value: 0x7f090027
 			public const int middle = 2131296295;
@@ -2278,17 +2363,17 @@ namespace BirdWatch
 			// aapt resource value: 0x7f090020
 			public const int multiply = 2131296288;
 			
-			// aapt resource value: 0x7f090076
-			public const int myButton = 2131296374;
+			// aapt resource value: 0x7f09007e
+			public const int myButton = 2131296382;
 			
-			// aapt resource value: 0x7f09007b
-			public const int navigation_header_container = 2131296379;
+			// aapt resource value: 0x7f090083
+			public const int navigation_header_container = 2131296387;
 			
 			// aapt resource value: 0x7f09002b
 			public const int never = 2131296299;
 			
-			// aapt resource value: 0x7f090080
-			public const int newsButton = 2131296384;
+			// aapt resource value: 0x7f090088
+			public const int newsButton = 2131296392;
 			
 			// aapt resource value: 0x7f09000c
 			public const int none = 2131296268;
@@ -2368,8 +2453,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f090072
 			public const int search_voice_btn = 2131296370;
 			
-			// aapt resource value: 0x7f090082
-			public const int seenButton = 2131296386;
+			// aapt resource value: 0x7f09008a
+			public const int seenButton = 2131296394;
 			
 			// aapt resource value: 0x7f090073
 			public const int select_dialog_listview = 2131296371;
@@ -2386,11 +2471,11 @@ namespace BirdWatch
 			// aapt resource value: 0x7f09001e
 			public const int showTitle = 2131296286;
 			
-			// aapt resource value: 0x7f09007a
-			public const int snackbar_action = 2131296378;
+			// aapt resource value: 0x7f090082
+			public const int snackbar_action = 2131296386;
 			
-			// aapt resource value: 0x7f090079
-			public const int snackbar_text = 2131296377;
+			// aapt resource value: 0x7f090081
+			public const int snackbar_text = 2131296385;
 			
 			// aapt resource value: 0x7f090032
 			public const int snap = 2131296306;
@@ -2416,11 +2501,29 @@ namespace BirdWatch
 			// aapt resource value: 0x7f09003c
 			public const int start = 2131296316;
 			
-			// aapt resource value: 0x7f09008a
-			public const int status_bar_latest_event_content = 2131296394;
+			// aapt resource value: 0x7f090092
+			public const int status_bar_latest_event_content = 2131296402;
 			
 			// aapt resource value: 0x7f090070
 			public const int submit_area = 2131296368;
+			
+			// aapt resource value: 0x7f09007c
+			public const int tViewConservation = 2131296380;
+			
+			// aapt resource value: 0x7f09007b
+			public const int tViewDiet = 2131296379;
+			
+			// aapt resource value: 0x7f09007a
+			public const int tViewIdentification = 2131296378;
+			
+			// aapt resource value: 0x7f090077
+			public const int tViewLatinName = 2131296375;
+			
+			// aapt resource value: 0x7f090078
+			public const int tViewLocation = 2131296376;
+			
+			// aapt resource value: 0x7f090076
+			public const int tViewName = 2131296374;
 			
 			// aapt resource value: 0x7f090019
 			public const int tabMode = 2131296281;
@@ -2428,20 +2531,23 @@ namespace BirdWatch
 			// aapt resource value: 0x7f09000f
 			public const int terrain = 2131296271;
 			
-			// aapt resource value: 0x7f090092
-			public const int text = 2131296402;
+			// aapt resource value: 0x7f09009a
+			public const int text = 2131296410;
 			
-			// aapt resource value: 0x7f090090
-			public const int text2 = 2131296400;
+			// aapt resource value: 0x7f090098
+			public const int text2 = 2131296408;
 			
 			// aapt resource value: 0x7f090058
 			public const int textSpacerNoButtons = 2131296344;
 			
-			// aapt resource value: 0x7f090078
-			public const int textView = 2131296376;
+			// aapt resource value: 0x7f090080
+			public const int textView = 2131296384;
 			
-			// aapt resource value: 0x7f09008e
-			public const int time = 2131296398;
+			// aapt resource value: 0x7f09009e
+			public const int textView1 = 2131296414;
+			
+			// aapt resource value: 0x7f090096
+			public const int time = 2131296406;
 			
 			// aapt resource value: 0x7f09004e
 			public const int title = 2131296334;
@@ -2449,8 +2555,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f090053
 			public const int title_template = 2131296339;
 			
-			// aapt resource value: 0x7f090074
-			public const int toolbar = 2131296372;
+			// aapt resource value: 0x7f090075
+			public const int toolbar = 2131296373;
 			
 			// aapt resource value: 0x7f09003d
 			public const int top = 2131296317;
@@ -2458,14 +2564,23 @@ namespace BirdWatch
 			// aapt resource value: 0x7f090052
 			public const int topPanel = 2131296338;
 			
+			// aapt resource value: 0x7f0900a1
+			public const int tvaddress = 2131296417;
+			
+			// aapt resource value: 0x7f09009f
+			public const int tvlat = 2131296415;
+			
+			// aapt resource value: 0x7f0900a0
+			public const int tvlong = 2131296416;
+			
 			// aapt resource value: 0x7f090009
 			public const int up = 2131296265;
 			
 			// aapt resource value: 0x7f09001f
 			public const int useLogo = 2131296287;
 			
-			// aapt resource value: 0x7f090087
-			public const int view = 2131296391;
+			// aapt resource value: 0x7f09008f
+			public const int view = 2131296399;
 			
 			// aapt resource value: 0x7f09000a
 			public const int view_offset_helper = 2131296266;
@@ -2473,8 +2588,8 @@ namespace BirdWatch
 			// aapt resource value: 0x7f090014
 			public const int wide = 2131296276;
 			
-			// aapt resource value: 0x7f090083
-			public const int wishButton = 2131296387;
+			// aapt resource value: 0x7f09008b
+			public const int wishButton = 2131296395;
 			
 			// aapt resource value: 0x7f09002c
 			public const int withText = 2131296300;
@@ -2689,19 +2804,22 @@ namespace BirdWatch
 			public const int Seenlayout = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int select_dialog_item_material = 2130903093;
+			public const int SeenLocationlayout = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int select_dialog_multichoice_material = 2130903094;
+			public const int select_dialog_item_material = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int select_dialog_singlechoice_material = 2130903095;
+			public const int select_dialog_multichoice_material = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int support_simple_spinner_dropdown_item = 2130903096;
+			public const int select_dialog_singlechoice_material = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int Wishlayout = 2130903097;
+			public const int support_simple_spinner_dropdown_item = 2130903097;
+			
+			// aapt resource value: 0x7f03003a
+			public const int Wishlayout = 2130903098;
 			
 			static Layout()
 			{
@@ -2709,6 +2827,31 @@ namespace BirdWatch
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0d0000
+			public const int delete_top_menus = 2131558400;
+			
+			// aapt resource value: 0x7f0d0001
+			public const int DeleteMenuList = 2131558401;
+			
+			// aapt resource value: 0x7f0d0002
+			public const int menuList = 2131558402;
+			
+			// aapt resource value: 0x7f0d0003
+			public const int top_menus = 2131558403;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
@@ -3368,6 +3511,12 @@ namespace BirdWatch
 			// aapt resource value: 0x7f0b0014
 			public const int Platform_Widget_AppCompat_Spinner = 2131427348;
 			
+			// aapt resource value: 0x7f0b0145
+			public const int PopupMenu = 2131427653;
+			
+			// aapt resource value: 0x7f0b0148
+			public const int PopupMenuListView = 2131427656;
+			
 			// aapt resource value: 0x7f0b0021
 			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131427361;
 			
@@ -3874,6 +4023,12 @@ namespace BirdWatch
 			
 			// aapt resource value: 0x7f0b0143
 			public const int Widget_Design_TextInputLayout = 2131427651;
+			
+			// aapt resource value: 0x7f0b0147
+			public const int myPopupMenuTextAppearanceLarge = 2131427655;
+			
+			// aapt resource value: 0x7f0b0146
+			public const int myPopupMenuTextAppearanceSmall = 2131427654;
 			
 			static Style()
 			{

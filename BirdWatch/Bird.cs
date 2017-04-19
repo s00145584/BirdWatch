@@ -17,5 +17,8 @@ namespace BirdWatch
         public string Name { get; set; }
         public byte[] Picture { get; set; }
         public string Description { get; set; }
+        public string Identification { get; set; }
+        public string Diet { get; set; }
+        public string Conservation { get; set; }
     }
 }

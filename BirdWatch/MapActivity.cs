@@ -15,6 +15,10 @@ using Android;
 using Android.Content.PM;
 using Android.Support.Design.Widget;
 using Android.Gms.Maps.Model;
+using System.Data.SqlClient;
+using Android.Preferences;
+using System.Data;
+using Android.Locations;
 
 namespace BirdWatch
 {
@@ -27,6 +31,12 @@ namespace BirdWatch
         Manifest.Permission.AccessFineLocation
     };
         const int RequestLocationId = 0;
+
+        string constring = "Data Source=noctis2.database.windows.net,1433;Initial Catalog=Birdwatching;Persist Security Info=True;User ID=snakesosa;Password=Freyasweetie1*;";
+        public string androidID = PreferenceManager.GetDefaultSharedPreferences(Application.Context).GetString("androidID", "");
+        SqlDataReader rdr = null;
+
+        LocationManager _locationManager;
 
         public GoogleMap GMap;
 
@@ -52,6 +62,7 @@ namespace BirdWatch
             if (CheckSelfPermission(permission) == (int)Permission.Granted)
             {
                 RequestPermissions(PermissionsLocation, RequestLocationId);
+                SetUpMap();
             }
             else
             {
@@ -65,22 +76,10 @@ namespace BirdWatch
                 }
                 //Finally request permissions with the list of permissions and Id
                 RequestPermissions(PermissionsLocation, RequestLocationId);
+                SetUpMap();
             }
 
-            //map = (SupportMapFragment)FragmentManager.FindFragmentById(R.id.map);
-            //map.getMapAsync(this);
-
-            //MapFragment mapFrag = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.my_mapfragment_container);
-            //GoogleMap map = mapFrag.Map;
-            //if (map != null)
-            //{
-            //    MapFragment _myMapFragment = MapFragment.NewInstance();
-            //FragmentTransaction tx = FragmentManager.BeginTransaction();
-            //tx.Add(getFragmentManager().findFragmentById(Resource.Layout.Maplayout), _myMapFragment);
-            //tx.Commit();
-            //}
-
-            SetUpMap();
+            //SetUpMap();
 
         }
 
@@ -95,17 +94,96 @@ namespace BirdWatch
         public void OnMapReady(GoogleMap googleMap)
         {
             this.GMap = googleMap;
+
+            //GMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(47.17, 27.5699), 16));
+
+            _locationManager = (LocationManager)GetSystemService(LocationService);
+
+            // Get Current Location
+            Location myLocation = getLastKnownLocation();
+
+            if (myLocation == null)
+            {
+                Toast.MakeText(this, "Unable to get Location.\nPlease ensure Location is turned on.", ToastLength.Long).Show();
+                Finish();
+            }
+            else
+            {
+
+
+
+                GMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(myLocation.Latitude, myLocation.Longitude), 16));
+
+
+                using (SqlConnection connection = new SqlConnection(constring))
+                {
+                    SqlCommand cmd = new SqlCommand("dbo.returnseenbirds", connection);
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@userID", SqlDbType.VarChar).Value = androidID;
+
+                    connection.Open();
+                    rdr = cmd.ExecuteReader();
+
+                    while (rdr.Read())
+                    {
+                        //birdList.Add(new Bird() { Name = rdr["Name"].ToString() });
+                        double Lat = (double)rdr["Latitude"];
+                        double Long = (double)rdr["Longitude"];
+                        string Name = (string)rdr["Name"];
+                        DateTime DateTime = (DateTime)rdr["Time"];
+
+                        GMap.AddMarker(new MarkerOptions().SetPosition(new LatLng(Lat, Long)).SetTitle(Name).SetSnippet(DateTime.ToString()));
+                    }
+                    connection.Close();
+                }
+
+                //GMap.AddMarker(new MarkerOptions().SetPosition(new LatLng(47.16, 27.57)).SetTitle("Hello world"));
+                //GMap.AddMarker(new MarkerOptions().Icon(BitmapDescriptorFactory.FromResource(R.drawable.ic_launcher)).anchor(0.0f, 1.0f) // Anchors the marker on the bottom left
+                //        .position(new LatLng(47.17, 27.5699))); //Iasi, Romania
+                GMap.MyLocationEnabled = true; //.setMyLocationEnabled(true);
+
+                GMap.InfoWindowClick += MapOnInfoWindowClick;
+            }
         }
-        //public void onMapReady(GoogleMap map)
-        //{
-        //    map.MoveCamera(CameraUpdateFactory.NewLatLngZoom(
-        //             new LatLng(47.17, 27.5699), 16));
-        //    map.AddMarker(new MarkerOptions().Icon(BitmapDescriptorFactory.FromResource(R.drawable.ic_launcher)).anchor(0.0f, 1.0f) // Anchors the marker on the bottom left
-        //            .position(new LatLng(47.17, 27.5699))); //Iasi, Romania
-        //    map.setMyLocationEnabled(true);
-        //}
+
+        private void MapOnInfoWindowClick(object sender, GoogleMap.InfoWindowClickEventArgs e)
+        {
+            Marker myMarker = e.Marker; //e.P0;
+            // Do something with marker.
+            var Name = myMarker.Title;
+            var intent = new Intent(this, typeof(BirdDetailActivity));
+            intent.PutExtra("Name", Name);
+            intent.PutExtra("IncomingPage", "Seen");
+            StartActivityForResult(intent,0);
+
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            Recreate();
+        }
 
 
+
+        private Location getLastKnownLocation()
+        {
+            IList<String> providers = _locationManager.GetProviders(true);
+            Location bestLocation = null;
+            foreach (String provider in providers)
+            {
+                Location l = _locationManager.GetLastKnownLocation(provider);
+                if (l == null)
+                {
+                    continue;
+                }
+                if (bestLocation == null || l.Accuracy < bestLocation.Accuracy)
+                {
+                    bestLocation = l;
+                }
+            }
+            return bestLocation;
+        }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {

@@ -46,6 +46,10 @@ BirdWatch.SeenActivity, BirdWatch;md548e890d458c68b1bde1bc12885e318a1.SeenActivi
 BirdWatch.SeenActivity, BirdWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md548e890d458c68b1bde1bc12885e318a1.SeenActivity
 BirdWatch.SeenActivity;md548e890d458c68b1bde1bc12885e318a1.SeenActivity
 birdwatch.SeenActivity;md548e890d458c68b1bde1bc12885e318a1.SeenActivity
+BirdWatch.SeenLocationActivity, BirdWatch;md548e890d458c68b1bde1bc12885e318a1.SeenLocationActivity
+BirdWatch.SeenLocationActivity, BirdWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md548e890d458c68b1bde1bc12885e318a1.SeenLocationActivity
+BirdWatch.SeenLocationActivity;md548e890d458c68b1bde1bc12885e318a1.SeenLocationActivity
+birdwatch.SeenLocationActivity;md548e890d458c68b1bde1bc12885e318a1.SeenLocationActivity
 BirdWatch.WishActivity, BirdWatch;md548e890d458c68b1bde1bc12885e318a1.WishActivity
 BirdWatch.WishActivity, BirdWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md548e890d458c68b1bde1bc12885e318a1.WishActivity
 BirdWatch.WishActivity;md548e890d458c68b1bde1bc12885e318a1.WishActivity
