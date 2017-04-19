@@ -50,7 +50,7 @@ namespace BirdWatch
 
                 while (rdr.Read())
                 {
-                    birdList.Add(new Bird() { Name = rdr["Name"].ToString(), Description= rdr["Description"].ToString() });
+                    birdList.Add(new Bird() { Name = rdr["Name"].ToString()});
                 }
                 connection.Close();
             }
@@ -63,7 +63,6 @@ namespace BirdWatch
             //SetListAdapter(ListAdapter);
             
             ListView.Adapter = ListAdapter;
-            ListView.ItemClick += OnListItemClick;
             ListView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)
             {
                 var selectedFromList = (String)(ListView.GetItemAtPosition(position.Position));
@@ -71,16 +70,6 @@ namespace BirdWatch
                 intent.PutExtra("Name", selectedFromList);
                 intent.PutExtra("IncomingPage", "Bird");
                 StartActivity(intent);
-
-                //          i.PutExtra("key",selectedFromList);
-                //          StartActivity(i);
-
-                //int pos=Convert.ToInt32(position);
-                //ListView Clicked item value
-                //string  itemValue    =(string)listView.GetItemAtPosition(pos);
-
-                //Toast.MakeText(this," position is "   +itemValue,ToastLength.Long).Show();
-
             };
 
         }
@@ -96,18 +85,6 @@ namespace BirdWatch
                 default:
                     return base.OnOptionsItemSelected(item);
             }
-        }
-
-        void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            //var listView = sender as ListView;
-            ////var t = tableItems[e.Position];
-            ////Android.Widget.Toast.MakeText(this, t.Heading, Android.Widget.ToastLength.Short).Show();
-
-            //var speakerName = Resource.Layout.custom_list[e.Position];
-            //var intent = new Intent(this, typeof(BirdDetailActivity));
-            //intent.PutExtra("Name", speakerName);
-            //StartActivity(intent);
         }
 
         //protected byte[] imageConvert(string varbin)

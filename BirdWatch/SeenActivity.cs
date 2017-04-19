@@ -12,6 +12,7 @@ using Android.Widget;
 using System.Data.SqlClient;
 using Android.Graphics;
 using Android.Preferences;
+using System.Data;
 
 namespace BirdWatch
 {
@@ -29,7 +30,7 @@ namespace BirdWatch
             SetContentView(Resource.Layout.Seenlayout);
 
             ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(mContext);
-            var String = prefs.GetString("androidID", "");
+            var androidID = prefs.GetString("androidID", "");
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
 
@@ -49,14 +50,14 @@ namespace BirdWatch
             {
                 SqlCommand cmd = new SqlCommand("dbo.allseenbirds", connection);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                //cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = model.Email;
+                cmd.Parameters.Add("@userID", SqlDbType.VarChar).Value = androidID;
 
                 connection.Open();
                 rdr = cmd.ExecuteReader();
 
                 while (rdr.Read())
                 {
-                    seenList.Add(new Bird() { Name = rdr["Name"].ToString(), Description = rdr["Description"].ToString() });
+                    seenList.Add(new Bird() { Name = rdr["Name"].ToString()});
                 }
                 connection.Close();
             }
@@ -66,6 +67,14 @@ namespace BirdWatch
             var ListAdapter = new CustomSeenListAdapter(this, Resource.Layout.custom_list, seenList.Select(n => n.Name).ToList());
             //SetListAdapter(ListAdapter);
             ListView.Adapter = ListAdapter;
+            ListView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs position)
+            {
+                var selectedFromList = (String)(ListView.GetItemAtPosition(position.Position));
+                var intent = new Intent(this, typeof(BirdDetailActivity));
+                intent.PutExtra("Name", selectedFromList);
+                intent.PutExtra("IncomingPage", "Seen");
+                StartActivity(intent);
+            };
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
