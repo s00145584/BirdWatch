@@ -14,10 +14,11 @@ using System.Data.SqlClient;
 using System.Data;
 using Android.Preferences;
 using Android.Locations;
+using Android.Content.PM;
 
 namespace BirdWatch
 {
-    [Activity(Label = "BirdDetail", Theme = "@style/NoActionBar")]
+    [Activity(Label = "BirdDetail", Theme = "@style/NoActionBar", ScreenOrientation = ScreenOrientation.SensorPortrait)]
     public class BirdDetailActivity : Activity
     {
         string constring = "Data Source=noctis2.database.windows.net,1433;Initial Catalog=Birdwatching;Persist Security Info=True;User ID=snakesosa;Password=Freyasweetie1*;";

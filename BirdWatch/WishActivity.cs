@@ -13,10 +13,11 @@ using System.Data.SqlClient;
 using Android.Graphics;
 using Android.Preferences;
 using System.Data;
+using Android.Content.PM;
 
 namespace BirdWatch
 {
-    [Activity(Label = "Wish List", Theme = "@style/NoActionBar")]
+    [Activity(Label = "Wish List", Theme = "@style/NoActionBar", ScreenOrientation = ScreenOrientation.SensorPortrait)]
     public class WishActivity : Activity
     {
 
