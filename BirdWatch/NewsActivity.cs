@@ -14,10 +14,11 @@ using Android.Content.Res;
 using System.Data;
 using Android.Graphics;
 using System.IO;
+using Android.Content.PM;
 
 namespace BirdWatch
 {
-    [Activity(Label = "News and Updates", Theme = "@style/NoActionBar")]
+    [Activity(Label = "News and Updates", Theme = "@style/NoActionBar", ScreenOrientation = ScreenOrientation.SensorPortrait)]
     public class NewsActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -56,7 +57,7 @@ namespace BirdWatch
 
                 while (rdr.Read())
                 {
-                    newsList.Add(new News() {NewsItem=rdr["NewsItem"].ToString(),Date= (DateTime)rdr["Date"] });
+                    newsList.Add(new News() {NewsItem=rdr["NewsItem"].ToString(),Date= (DateTime)rdr["Date"], sDate = "News Update: " + ((DateTime)rdr["Date"]).ToString("dd/MM/yyyy") });
                     //LoginRole = rdr["RoleId"].ToString();
                     //OwnerId = rdr["UserId"].ToString();
                 }

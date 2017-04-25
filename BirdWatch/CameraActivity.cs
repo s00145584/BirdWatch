@@ -18,7 +18,7 @@ using Android.Support.Design.Widget;
 
 namespace BirdWatch
 {
-    [Activity(Label = "Camera", Theme = "@style/NoActionBar")]
+    [Activity(Label = "Camera", Theme = "@style/NoActionBar", ScreenOrientation = ScreenOrientation.SensorPortrait)]
     public class CameraActivity : Activity
     {
 

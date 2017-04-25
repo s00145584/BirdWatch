@@ -65,7 +65,7 @@ namespace BirdWatch
 
             // Get the built-in first text view and insert the group name ("Vegetables", "Fruits", etc.):
             TextView textView = view.FindViewById<TextView>(Android.Resource.Id.Text1);
-            textView.Text = news.Date.ToString();
+            textView.Text = news.sDate;
 
             if (groupPosition % 2 == 1)
             {
@@ -122,9 +122,9 @@ namespace BirdWatch
             TextView textView = view.FindViewById<TextView>(Android.Resource.Id.Text1);
             textView.Text = newsItem;
 
-            // Reuse the textView to insert the number of produce units into the child's second text field:
-            textView = view.FindViewById<TextView>(Android.Resource.Id.Text2);
-            textView.Text = "1";// produceItem.Count.ToString() + " units";
+            //Reuse the textView to insert the number of produce units into the child's second text field:
+            //textView = view.FindViewById<TextView>(Android.Resource.Id.Text2);
+            //textView.Text = "1";// produceItem.Count.ToString() + " units";
 
             if (groupPosition % 2 == 1)
             {
