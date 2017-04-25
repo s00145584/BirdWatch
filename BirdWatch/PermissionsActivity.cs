@@ -15,7 +15,7 @@ using Android.Support.Design.Widget;
 
 namespace BirdWatch
 {
-    [Activity(Label = "PermissionsActivity", Theme = "@style/NoActionBar")]
+    [Activity(Label = "PermissionsActivity", Theme = "@style/NoActionBar", ScreenOrientation = ScreenOrientation.SensorPortrait)]
     public class PermissionsActivity : Activity
     {
         readonly string[] PermissionsLocation =

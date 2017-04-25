@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BirdWatch
 {
@@ -16,5 +17,6 @@ namespace BirdWatch
     {
         public string NewsItem { get; set; }
         public DateTime Date { get; set; }
+        public string sDate { get; set; }
     }
 }

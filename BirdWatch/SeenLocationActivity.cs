@@ -22,7 +22,7 @@ using Android.Preferences;
 
 namespace BirdWatch
 {
-    [Activity(Label = "SeenLocationActivity", Theme = "@style/NoActionBar")]
+    [Activity(Label = "SeenLocationActivity", Theme = "@style/NoActionBar", ScreenOrientation = ScreenOrientation.SensorPortrait)]
     public class SeenLocationActivity : Activity, ILocationListener
     {
         string constring = "Data Source=noctis2.database.windows.net,1433;Initial Catalog=Birdwatching;Persist Security Info=True;User ID=snakesosa;Password=Freyasweetie1*;";
@@ -147,8 +147,9 @@ namespace BirdWatch
             else
             {
                 _locationProvider = string.Empty;
+                Toast.MakeText(this, "Unable to get Location.\nPlease ensure Location is turned on.", ToastLength.Long).Show();
+                Finish();
             }
-            Log.Debug(TAG, "Using " + _locationProvider + ".");
         }
 
         protected override void OnResume()
@@ -180,8 +181,8 @@ namespace BirdWatch
             _locationManager.RequestSingleUpdate(_locationProvider, this, null);
             Location location = getLastKnownLocation(); //_locationManager.GetLastKnownLocation(_locationProvider);
             _currentLocation = location;
-            _latText.Text = "Latitude: " + Math.Round(location.Latitude, 6);
-            _longText.Text = "Longitude: " + Math.Round(location.Longitude, 6);
+            _latText.Text = Math.Round(location.Latitude, 6).ToString();
+            _longText.Text = Math.Round(location.Longitude, 6).ToString();
             lat = Math.Round(location.Latitude, 6);
             lng = Math.Round(location.Longitude, 6);
 

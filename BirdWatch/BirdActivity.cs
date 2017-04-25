@@ -11,10 +11,11 @@ using Android.Views;
 using Android.Widget;
 using System.Data.SqlClient;
 using Android.Graphics;
+using Android.Content.PM;
 
 namespace BirdWatch
 {
-    [Activity(Label = "Bird List", Theme = "@style/NoActionBar")]
+    [Activity(Label = "Bird List", Theme = "@style/NoActionBar", ScreenOrientation = ScreenOrientation.SensorPortrait)]
     public class BirdActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

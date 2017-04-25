@@ -22,7 +22,7 @@ using Android.Locations;
 
 namespace BirdWatch
 {
-    [Activity(Label = "Map", Theme = "@style/NoActionBar")]
+    [Activity(Label = "Map", Theme = "@style/NoActionBar", ScreenOrientation = ScreenOrientation.SensorPortrait)]
     public class MapActivity : Activity, IOnMapReadyCallback
     {
         readonly string[] PermissionsLocation =

@@ -54,7 +54,7 @@
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10.0dp" />
+                        android:layout_marginTop="30.0dp" />
                     <TextView
                         android:text="Text"
                         android:textColor="#000000"
@@ -64,7 +64,7 @@
                         android:id="@+id/tViewLatinName"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="15dp" />
-                    <TextView
+                <!--<TextView
                         android:text="Location"
                         android:textColor="#000000"
                         android:textSize="18dp"
@@ -81,7 +81,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/tViewLocation"
                         android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp" />
+                        android:layout_marginLeft="15dp" />-->
                 </LinearLayout>
                 <ImageView
                     android:src="@android:drawable/ic_menu_gallery"
@@ -93,6 +93,26 @@
                     android:scaleType="centerCrop"
                     android:layout_marginRight="10.0dp" />
             </LinearLayout>
+            <TextView
+                android:text="Location"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20.0dp" />
+            <TextView
+                android:text="Text"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tViewLocation"
+                android:layout_marginTop="10.0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20.0dp" />
             <TextView
                 android:text="Identification"
                 android:textColor="#000000"

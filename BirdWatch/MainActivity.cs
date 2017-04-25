@@ -14,7 +14,9 @@ using static Android.Resource;
 
 namespace BirdWatch
 {
-    [Activity(Label = "Bird Watching Ireland", MainLauncher = true, Icon = "@drawable/app_icon5", Theme = "@style/NoActionBar")]
+    [Activity(Label = "Bird Watching Ireland", MainLauncher = true, Icon = "@drawable/app_icon5", Theme = "@style/NoActionBar",ScreenOrientation = ScreenOrientation.SensorPortrait)]
+
+
     public class MainActivity : Activity
     {
         readonly string[] PermissionsLocation =
@@ -81,6 +83,16 @@ namespace BirdWatch
             Button wishButton = FindViewById<Button>(Resource.Id.wishButton);
             Button mapButton = FindViewById<Button>(Resource.Id.mapButton);
             Button cameraButton = FindViewById<Button>(Resource.Id.cameraButton);
+
+            //Android.Graphics.Drawables.Drawable drawable = mContext.GetDrawable(Resource.Drawable.news2);
+            //drawable.SetBounds(0, 0, 385, 385);
+            //newsButton.SetCompoundDrawables(null, drawable, null, null);
+
+            //Android.Graphics.Drawables.Drawable drawable = mContext.GetDrawable(Resource.Drawable.bird2);
+            //drawable.SetBounds(0, 0, 385, 385);
+            //birdButton.SetCompoundDrawables(null, drawable, null, null);
+
+
 
             newsButton.Click += delegate { StartActivity(typeof(NewsActivity)); };
             birdButton.Click += delegate { StartActivity(typeof(BirdActivity)); };
