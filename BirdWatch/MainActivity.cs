@@ -122,7 +122,7 @@ namespace BirdWatch
                         telephonySIMSerialNumber = tManager.SimSerialNumber;
                 }
                 var androidID = Android.Provider.Settings.Secure.GetString(ContentResolver, Android.Provider.Settings.Secure.AndroidId);
-                var deviceUuid = new UUID(androidID.GetHashCode(), ((long)telephonyDeviceID.GetHashCode() << 32) | telephonySIMSerialNumber.GetHashCode());
+                var deviceUuid = new UUID(androidID.GetHashCode(), ((int)telephonyDeviceID.GetHashCode() << 32) | telephonySIMSerialNumber.GetHashCode());
                 var deviceID = deviceUuid.ToString();
 
                 ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(mContext);

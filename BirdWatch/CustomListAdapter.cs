@@ -64,7 +64,7 @@ namespace BirdWatch
             {
                 mView.SetBackgroundColor(Color.ParseColor("#e68f33"));//row 1
             }
-            mView.SetMinimumHeight(200);
+            //mView.SetMinimumHeight(200);
             return mView;
         }
 
