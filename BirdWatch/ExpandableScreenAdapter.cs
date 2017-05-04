@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
+using Android.Util;
 
 namespace BirdWatch
 {
@@ -75,8 +76,17 @@ namespace BirdWatch
             {
                 view.SetBackgroundColor(Color.ParseColor("#f0be28"));//row 1
             }
-            view.SetMinimumHeight(200);
+            //(int)TypedValue.ApplyDimension(ComplexUnitType.Sp, 20, Application.Context.Resources.DisplayMetrics);
+            view.SetMinimumHeight(dpToPx(50));
+                //view.SetMinimumHeight(200);
             return view;
+        }
+
+        public int dpToPx(int dp)
+        {
+            
+            int pixel = (int)TypedValue.ApplyDimension(ComplexUnitType.Dip, dp, Application.Context.Resources.DisplayMetrics);
+            return pixel;
         }
 
         public override Java.Lang.Object GetGroup(int groupPosition)
