@@ -2589,7 +2589,8 @@ containing a value of this type.
         public static int map=0x7f09008e;
         public static int mapButton=0x7f09008c;
         public static int media_actions=0x7f090093;
-        public static int menu_preferences=0x7f0900a5;
+        public static int menu_about=0x7f0900a5;
+        public static int menu_preferences=0x7f0900a6;
         public static int middle=0x7f090027;
         public static int mini=0x7f090042;
         public static int multiply=0x7f090020;
@@ -2745,8 +2746,9 @@ containing a value of this type.
     public static final class menu {
         public static int delete_top_menus=0x7f0d0000;
         public static int deletemenulist=0x7f0d0001;
-        public static int menulist=0x7f0d0002;
-        public static int top_menus=0x7f0d0003;
+        public static int menu_about=0x7f0d0002;
+        public static int menulist=0x7f0d0003;
+        public static int top_menus=0x7f0d0004;
     }
     public static final class string {
         public static int ApplicationName=0x7f050036;

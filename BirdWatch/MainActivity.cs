@@ -11,6 +11,7 @@ using Android.Content.PM;
 using Android.Support.Design.Widget;
 using Android.Preferences;
 using static Android.Resource;
+using Android.Gms.Common;
 
 namespace BirdWatch
 {
@@ -102,6 +103,29 @@ namespace BirdWatch
             cameraButton.Click += delegate { StartActivity(typeof(CameraActivity)); };
 
 
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.Menu_About, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            //Toast.MakeText(this, "Action selected: " + item.TitleFormatted +" " + item.ItemId,ToastLength.Short).Show();
+            //return base.OnOptionsItemSelected(item);
+
+            switch (item.ItemId)
+            {
+                case Resource.Id.menu_about:
+                    var intent = new Intent(this, typeof(BirdDetailActivity));
+                    //intent.PutExtra("IncomingPage", "Bird");
+                    StartActivity(intent);
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

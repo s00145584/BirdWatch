@@ -1,0 +1,1 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"><TextView android:id="@+id/menu_about" android:text="About" android:showAsAction="always" android:title="About" /></menu>
